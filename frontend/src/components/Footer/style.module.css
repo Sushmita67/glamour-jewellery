@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+  background-color: #020203;
+}
+
+.copyrightContainer {
+  padding: 1.2em 0;
+}
+
+.copyrightContainer p {
+  font-size: .8em;
+  text-align: center;
+  color: #ffffff79;
+}

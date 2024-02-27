@@ -1,0 +1,16 @@
+.cardContainer {
+  text-align: center;
+  max-width: 270px;
+  margin: 1.2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconContainer img {
+  width: clamp(50px, 8vw, 60px);
+}
+
+.cardTitle {
+  margin: 1em 0;
+}

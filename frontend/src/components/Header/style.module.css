@@ -1,0 +1,49 @@
+.header {
+  width: 100%;
+  padding: 1em 0;
+  border-bottom: 2px solid #ececec;
+}
+
+.headerArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3em;
+}
+
+.logo {
+  width: clamp(300px, 6vw, 30px);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.actions svg {
+  color: #000;
+  font-size: 1.3em;
+}
+
+.actions a {
+  width: 21px;
+  height: 21px;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 700px) {
+  .headerArea {
+    gap: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions {
+    gap: 15px;
+  }
+  .headerArea {
+    gap: .9em;
+  }
+}

@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+}
+
+.loginContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.titleContainer {
+  margin-bottom: 25px;
+}
