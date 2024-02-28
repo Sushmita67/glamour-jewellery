@@ -34,7 +34,7 @@ public class SystemUserStepDefinitions {
 
     @Given("getById SystemUser")
     public void getbyid_SystemUser() {
-        systemUserService.getById(2L);
+        systemUserService.getById(1L);
         System.out.println("User Fetched Successfully!");
     }
 

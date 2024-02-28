@@ -47,6 +47,8 @@ export const userAuthService = () => {
       // }
 
     } catch (error: any) {
+      toast.error("Error Registering!");
+
 
       setLoading(false);
 
@@ -60,13 +62,15 @@ export const userAuthService = () => {
         setError(requestErrorMessages.emailAlreadyExists)
         return;
       } else {
+        toast.error("Error");
         setError(requestErrorMessages.genericError);
         return;
       };
     }
+    toast.success("Registered Successfully!");
 
     setLoading(false);
-    navigate("/");
+    navigate("/login");
   }
 
 
