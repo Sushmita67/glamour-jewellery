@@ -1,0 +1,24 @@
+.registerContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 60px;
+}
+
+.titleContainer {
+  margin-bottom: 25px;
+}
+
+.newCostumer ul {
+  list-style-position: inside;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 850px) {
+  .registerContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}

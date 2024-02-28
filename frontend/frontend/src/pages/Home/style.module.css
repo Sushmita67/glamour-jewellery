@@ -1,0 +1,36 @@
+.main {
+  padding-top: 0;
+}
+
+.productsContainer {
+  margin-bottom: 3.2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.productsContainer ul {
+  width: 100%;
+  padding-bottom: 25px;
+  display: flex;
+  overflow-x: auto;
+  list-style: none;
+}
+
+
+.productCardWrapper {
+  width: calc(25% - 12px); /* Adjust the width to occupy 25% of the container with margin-right */
+}
+
+.productCardSpacing {
+  margin-right: 12px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .productCardWrapper {
+    width: 100%; /* Set width to 100% for smaller screens */
+    margin-right: 0; /* Remove margin-right to ensure full width */
+  }
+}

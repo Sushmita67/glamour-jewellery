@@ -1,0 +1,72 @@
+.container {
+  padding: 1.5em 20px 3em;
+  background-color: #f5f7ff;
+  border-radius: 15px;
+}
+
+.flexContainer {
+  padding: 3em 0 5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productDetailsContainer {
+  max-width: 400px;
+}
+
+.productDetailsContainer h3 {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.price {
+  color: var(--main-blue);
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: 1.2em 0 2em;
+}
+
+.productImageContainer {
+  max-width: 450px;
+  height: 290px;
+}
+
+.productImageContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.commentsSection h2 {
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+.commentsContainer {
+  max-width: 400px;
+  max-height: 300px;
+  padding: 0 1em 1em 0;
+  margin: 18px 0 5px;
+  overflow-y: auto;
+}
+
+.noReviewsMessage {
+  font-size: .9em;
+  font-style: italic;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 920px) {
+
+  .flexContainer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .productImageContainer {
+    margin-bottom: 1.5em;
+    height: auto;
+  }
+}
