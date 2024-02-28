@@ -6,7 +6,7 @@ Feature: SystemUser
 
     Examples:
     | userId | email | firstName | lastName | password | role |
-    | 1 | asis.mool@gmail.com | Ashish | Mool | $2a$10$h8d7WrgMnIlmK8TxYHxTeuYk0DLs0EAgp5y/ZJrFgjOhFFbxnu6qW | Customer |
+    | 1 | biswakarmasushmita5@gmail.com | Susmita | Biswakarma | $2a$10$h8d7WrgMnIlmK8TxYHxTeuYk0DLs0EAgp5y/ZJrFgjOhFFbxnu6qW | Customer |
 
   Scenario Outline: Register User Scenario
     Given save SystemUser
@@ -16,5 +16,5 @@ Feature: SystemUser
 
     Examples:
       | email | firstName | lastName | password
-      | asis.mool@gmail.com | Ashish | Mool | Test@123
+      | biswakarmasushmita5@gmail.com | Susmita | Biswakarma | Test@123
 
