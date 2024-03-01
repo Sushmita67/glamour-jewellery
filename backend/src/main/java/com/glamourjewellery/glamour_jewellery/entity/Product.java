@@ -42,13 +42,7 @@ public class Product {
     @Column(name = "availability", nullable = true)
     private Boolean productAvailability;
 
-    @OneToMany(mappedBy = "product")
-    @JsonIgnore
-    private List<CartItem> cartItems;
-
-    @Override
-    public String toString() {
-        return "Product Name: " + getProductName() + ", Price: " + getProductPrice();
-    }
+    @OneToMany(mappedBy = "productId", cascade = CascadeType.ALL)
+    private List<Wishlist> wishlists; // Corrected mappedBy attribute
 
 }
