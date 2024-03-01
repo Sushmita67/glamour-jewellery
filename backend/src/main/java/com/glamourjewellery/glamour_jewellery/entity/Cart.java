@@ -1,42 +1,34 @@
 package com.glamourjewellery.glamour_jewellery.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
-@Table(name = "carts")
 @Entity
-@Data
-@AllArgsConstructor
+@Table(name = "carts")
+@Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Cart {
 
     @Id
     @SequenceGenerator(name = "carts_seq_gen", sequenceName = "carts_id_seq", allocationSize = 1)
     @GeneratedValue(generator = "carts_seq_gen", strategy = GenerationType.SEQUENCE)
-    @Column(name = "cart_id")
     private Long cartId;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private SystemUser user;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "cart_products",
+            joinColumns = @JoinColumn(name = "cart_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id"))
+    private List<Product> products;
 
-    private Double totalPrice;
-
-    @OneToOne
-    @JoinColumn(
-            name = "user_id",
-            referencedColumnName = "userId"
-    )
-
-    private SystemUser systemUser;
-
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.REMOVE)
-    @JsonIgnore
-    private List<CartItem> cartItems;
-
+    @Column(name = "cart_total", nullable = false)
+    private Double cartTotal;
 }

@@ -45,8 +45,12 @@ public class SpringSecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers(
                         "/add-product/**",
+                        "/user/**",
+                        "/user/favorite/**",
+                        "/addToCart/**",
                         "/profile",
                         "/profile/**",
+                        "carts/**",
                         "/login",
                         "/system-user/**",
                         "/dashboard/**",
@@ -55,6 +59,7 @@ public class SpringSecurityConfig {
                         "/purchased-products/**",
                         "/products/**",
                         "/category/**",
+                        "/product-details/**",
                         "/booking/**",
                         "/authenticate",
                         "/authenticate/**",

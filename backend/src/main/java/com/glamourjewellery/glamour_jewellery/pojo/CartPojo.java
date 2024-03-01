@@ -1,6 +1,7 @@
 package com.glamourjewellery.glamour_jewellery.pojo;
 
-import com.glamourjewellery.glamour_jewellery.entity.Cart;
+import com.glamourjewellery.glamour_jewellery.entity.Product;
+import com.glamourjewellery.glamour_jewellery.entity.SystemUser;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,8 +14,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CartPojo {
-    private Long id;
-    private List<Cart> cartItems;
+    private Long cartId;
+    private SystemUser user;
+    private List<Product> products;
     private Double cartTotal;
-    private Long userId; // Assuming you need to associate the cart with a user
 }

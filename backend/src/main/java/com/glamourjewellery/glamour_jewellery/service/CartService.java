@@ -1,10 +1,12 @@
 package com.glamourjewellery.glamour_jewellery.service;
 
 import com.glamourjewellery.glamour_jewellery.entity.Cart;
-import com.glamourjewellery.glamour_jewellery.entity.SystemUser;
 
 public interface CartService {
+    Cart createCart(Cart cart);
+    Cart updateCart(Cart cart);
+    Cart getCartById(Long id);
+    void deleteCart(Long id);
 
-    Cart createCart(SystemUser systemUser);
 
 }

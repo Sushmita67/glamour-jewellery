@@ -33,8 +33,8 @@ public class ProductRepoTest {
 
         product.setProductName("Product Name For Test");
         product.setProductDescription("Product Description");
-        product.setProductCategory("Category");
-        product.setStockQuantity(10);
+        product.setProductCategory("Product Type");
+        product.setStockQuantity(3);
         product.setProductPrice(1200.1);
         product.setProductAvailability(true);
 
@@ -51,6 +51,14 @@ public class ProductRepoTest {
         Assertions.assertThat(product.getProductId()).isEqualTo(1L);
     }
 
+//    @Test
+//    @Order(3)
+//    public void testDuration() throws ParseException {
+//        Date startDate=new SimpleDateFormat("dd/MM/yyyy").parse("02/01/2024");
+//        Date endDate=new SimpleDateFormat("dd/MM/yyyy").parse("02/01/2025");
+//        List<Product> productList = productRepo.findByStartDateGreaterThanEqualAndEndDateLessThanEqual(startDate, endDate);
+//        Assertions.assertThat(productList.size()).isGreaterThan(0);
+//    }
 
 }
 
