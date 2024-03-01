@@ -16,7 +16,7 @@ export const cartProductService = () => {
   const [error, setError] = useState<string | null>(null);
 
 
-  function addProductOnCart(productID: string | undefined) {
+  function addProductOnCart(productID: string | undefined, status: string) {
 
     try {
 
